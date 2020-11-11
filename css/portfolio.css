@@ -1,3 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Arvo', serif; }
 
+#gridContainer {
+  display: grid;
+  grid-template-columns: 15% 1fr 1fr 1fr 1fr 1fr 1fr 15%;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+  width: 100%; }
+  #gridContainer #about {
+    grid-area: 2 / 2 / 3 / 5; }
+    #gridContainer #about h1 {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 400; }
+    #gridContainer #about p {
+      font-size: 1rem;
+      line-height: 15px; }
 
 /*# sourceMappingURL=portfolio.css.map */
