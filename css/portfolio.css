@@ -1,24 +1,61 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
-  color: white;
   font-family: 'Arvo', serif; }
 
 #gridContainer {
   display: grid;
-  grid-template-columns: 15% 1fr 1fr 1fr 1fr 1fr 1fr 15%;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 2000px;
   width: 100%; }
+  #gridContainer #name1 {
+    grid-area: 1 / 4 / 1 / 5;
+    font-size: 1.25rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+    z-index: 1;
+    padding-right: 10px; }
+  #gridContainer #name2 {
+    grid-area: 1 / 5 / 1 / 6;
+    color: white;
+    font-size: 1.25rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    z-index: 1;
+    text-align: left;
+    padding-left: 10px; }
   #gridContainer #about {
-    grid-area: 2 / 2 / 3 / 5; }
-    #gridContainer #about h1 {
-      font-size: 2rem;
-      margin: 0;
-      font-weight: 400; }
-    #gridContainer #about p {
-      font-size: 1rem;
-      line-height: 15px; }
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-area: 2 / 2 / 4 / 4;
+    width: 100%; }
+    #gridContainer #about h2 {
+      text-align: right;
+      font-size: 5rem;
+      margin: 0 0 0 auto;
+      font-weight: 400;
+      width: 75%; }
+    #gridContainer #about #left {
+      font-size: .8rem;
+      line-height: 30px;
+      text-align: right;
+      width: 95%;
+      margin-left: auto; }
+
+#blackContainer {
+  grid-area: 1 / 5 / -1 / -1;
+  background-color: black;
+  z-index: 0; }
+
+#projects {
+  grid-area: 3 / 6 / 3 / 8;
+  color: white;
+  text-align: left;
+  font-size: 40px;
+  font-weight: 400;
+  z-index: 1; }
 
 /*# sourceMappingURL=portfolio.css.map */
