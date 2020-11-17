@@ -7,9 +7,10 @@ body {
 #gridContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    height: 2000px;
+    column-gap: 10px;
+    grid-template-rows: .25fr 1fr 1fr .25fr 1fr 1fr .5fr 1fr;
     width: 100%;
+    height: 2100px;
 
     #name1 {
         grid-area: 1 / 4 / 1 / 5;
@@ -18,7 +19,7 @@ body {
         margin-bottom: auto;
         text-align: right;
         z-index: 1;
-        padding-right: 10px;
+        transition: 2s;
     }
 
     #name2 {
@@ -31,6 +32,7 @@ body {
         z-index: 1;
         text-align: left;
         padding-left: 10px;
+        transition: 2s;
     }
 
     #about {
@@ -41,33 +43,190 @@ body {
         
         h2 {
             text-align: right;
-            font-size: 5rem;
+            font-size: 4rem;
             margin: 0 0 0 auto;
             font-weight: 400;
             width: 75%;
+            transition: 2s;
         }
 
-        #left {
+        p {
             font-size: .8rem;
             line-height: 30px;
             text-align: right;
             width: 95%;
             margin-left: auto;
+            margin-bottom: 50px;
+            transition: 2s;
+        }
+
+    }
+
+    #about2 {
+        margin-top: auto;
+        margin-bottom: auto;
+        grid-area: 3 / 6 / 3 / 8;
+        width: 100%;
+        z-index: 1;
+
+        p {
+            color: white;
+            font-size: .8rem;
+            line-height: 30px;
+            text-align: left;
+            width: 95%;
+            margin-right: auto;
+            margin-bottom: 50px;
+            transition: 2s;
         }
     }
 }
 
 #blackContainer {
-    grid-area: 1 / 5 / -1 / -1;
+    grid-area: 1 / 5 / 7 / -1;
     background-color: black;
     z-index: 0;
 }
 
+#blackContainer2 {
+    grid-area: 5 / 1 / 7 / -1;
+    background-color: black;
+}
+
+#whiteContainer {
+    grid-area: 1 / 1 / 4 / 5;
+}
+
 #projects {
-    grid-area: 3 / 6 / 3 / 8;
+    grid-area: 5 / 2 / 7 / 2;
     color: white;
-    text-align: left;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
     z-index: 1;
+    opacity: 1;
+    transition: 2s;
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project:hover {
+    cursor: pointer;
+    opacity: .5;
+    transition: opacity .5s ease-in-out;
+}
+
+#room {
+    grid-area: 5 / 3 / 5 / 6;
+    z-index: 1;
+    width: 75%;
+    margin: auto;
+    object-fit: contain;
+}
+
+#accard {
+    grid-area: 5 / 5 / 5 / 7;
+    z-index: 2;
+    width: 90%;
+    margin: auto;
+}
+
+#social {
+    grid-area: 6 / 3 / 6 / 5;
+    z-index: 1;
+    width: 100%;
+    margin: auto;
+}
+
+#accard2 {
+    grid-area: 6 / 4 / 6 / 8;
+    z-index: 1;
+    width: 60%;
+    margin: auto;
+}
+
+#bnj {
+    grid-area: 5 / 6 / 5 / 9;
+    z-index: 1;
+    width: 90%;
+    margin: auto;
+}
+
+#bbemail {
+    grid-area: 6 / 7 / 6 / 9;
+    z-index: 1;
+    width: 100%;
+    margin: auto;
+}
+
+#socials {
+    grid-area: 7 / 2 / 7 / 5;
+    display: flex;
+    h2 {
+        writing-mode: vertical-lr;
+        text-align: right;
+    }
+}
+
+#skillstitle {
+    grid-area: 7 / 5 / 7 / 5;
+    font-size: 3rem;
+    margin:auto;
+}
+
+#skills {
+    grid-area: 8 / 5 / 10 / 5;
+    height: 100%;
+
+    ul {
+        list-style-type: none;
+        line-height: 40px;
+    }
+}
+
+#skills2 {
+    grid-area: 8 / 6 / 10 / 6 ;
+
+    ul {
+        list-style-type: none;
+        line-height: 40px;
+    }
+}
+
+#skills3 {
+    grid-area: 8 / 7 / 10 / 7 ;
+
+    ul {
+        list-style-type: none;
+        line-height: 40px;
+    }
+}
+
+#socials{
+    grid-area: 7 / 1 / 10 / 4;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+#socialtitle {
+    grid-area: 7 / 4 /  10 / 4;
+    writing-mode: vertical-lr;
+    text-align: center;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1500px) {
+    li {
+        font-size: 12px;
+    }
 }
